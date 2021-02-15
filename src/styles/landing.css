@@ -66,19 +66,16 @@
   box-sizing: border-box;
   padding-top: 120px;
   padding-left: 10%;
-  border: 2px solid white;
 }
 .image {
   width: 50%;
   height: 100%;
-  border: 2px solid white;
 }
 .image img {
-  position: relative;
   height: 300px;
   width: 500px;
-  top: 40px;
-  left: 15%;
+  margin-left: 50px;
+  margin-top: 50px;
 }
 
 .section-four {
@@ -124,11 +121,11 @@
   .btns {
     display: none;
   }
-  .sections {
-    display: block;
+
+  .section-four {
+    height: 1000px;
   }
-  .details,
-  .image {
-    width: 100%;
+  .sections {
+    min-width: 600px;
   }
 }
