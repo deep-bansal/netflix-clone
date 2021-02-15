@@ -1,0 +1,45 @@
+.main {
+  background-image: url("https://wallpaperaccess.com/full/2614762.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 550px;
+  color: white;
+  position: relative;
+  top: 77px;
+}
+.main h1 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+
+  top: 200px;
+  left: 100px;
+}
+.btn-light {
+  width: 120px;
+  /* height: 140px; */
+}
+#buttons {
+  position: relative;
+  width: 300px;
+  top: 220px;
+  left: 100px;
+}
+.btn-secondary {
+  margin-left: 10px;
+  width: 150px;
+}
+
+.fa-volume-off {
+  font-size: 2.2rem;
+  /* position: relative; */
+  right: 0;
+}
+
+.heads {
+  color: white;
+  position: relative;
+  left: 40px;
+  width: 400px;
+}

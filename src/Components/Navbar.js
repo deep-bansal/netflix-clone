@@ -1,14 +1,24 @@
-import React from "react";
-
+import React, { useState } from "react";
+import "../styles/navbar.css";
 function Navbar() {
+  const [expand, setExpand] = useState("false");
+  function handleClick(e) {
+    e.preventDefault();
+    if (expand === false) {
+      setExpand(true);
+    } else {
+      setExpand(false);
+    }
+    console.log(expand);
+  }
   return (
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
           NETFLIX
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -16,69 +26,73 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon">
+            <i className="fas fa-bars"></i>
+          </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
                 Home
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
                 TV Shows
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
                 Movies
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
                 New & Popular
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
                 My List
               </a>
             </li>
 
-            <li class="nav-item dropdown">
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li className="nav-item dropdown">
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Action
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Another action
                   </a>
                 </li>
                 <li>
-                  <hr class="dropdown-divider" />
+                  <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Something else here
                   </a>
                 </li>
               </ul>
             </li>
-            <li class="nav-item"></li>
+            <li className="nav-item"></li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
+          <form className="d-flex">
+            {expand && (
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            )}
+            <button onClick={(e) => handleClick(e)} className="btn-outline">
+              <i className="fas fa-search"></i>
             </button>
           </form>
         </div>

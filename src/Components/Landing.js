@@ -1,13 +1,27 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
+import "../styles/landing.css";
 
 function Landing(props) {
   return (
     <Fragment>
       <div className="landing">
         <h1 id="logo">NETFLIX</h1>
-        <button type="button" class="btn btn-danger">
-          Sign in
-        </button>
+        <div className="btns">
+          <button type="button" className="btn btn-danger">
+            Sign in
+          </button>
+          <button
+            type="button"
+            className="btn btn-danger"
+            style={{ width: "160px" }}
+          >
+            <Link style={{ color: "white", textDecoration: "none" }} to="/main">
+              {" "}
+              Redirect to main
+            </Link>
+          </button>
+        </div>
         <h1 id="content">
           Unlimited movies, TV
           <br></br>
@@ -17,10 +31,14 @@ function Landing(props) {
         <h5 className="margin">
           Ready to watch? Enter your email to create or restart your membership.
         </h5>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Email address" />
+        <div className="input-group mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Email address"
+          />
           <button
-            class="btn btn-outline-secondary"
+            className="btn btn-outline-secondary"
             type="button"
             id="button-addon2"
           >

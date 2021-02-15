@@ -1,0 +1,40 @@
+.navbar {
+  background-color: black !important;
+  color: white !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+.navbar a {
+  color: white;
+}
+.navbar-brand {
+  color: red !important;
+  font-size: 2.2rem !important;
+}
+.navbar-toggler-icon i {
+  background-color: white;
+  position: relative;
+  left: -1px;
+  font-size: 2rem;
+}
+
+.me-2 {
+  height: 20px !important;
+}
+.btn-outline {
+  height: 40px !important;
+  border: none !important;
+  position: relative;
+  top: -4px;
+  background: transparent;
+  color: white !important;
+}
+.btn-outline:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+.btn-outline:hover {
+  background: none !important;
+}
